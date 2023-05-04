@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sol.mp3-bc0af3829ab961b646af2f232ad07357.mp3str"
+
+[deps]
+
+source_file="res://assets/music/sol.mp3"
+dest_files=[ "res://.import/sol.mp3-bc0af3829ab961b646af2f232ad07357.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
