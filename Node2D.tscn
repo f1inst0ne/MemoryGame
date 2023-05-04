@@ -163,12 +163,12 @@ margin_right = 1029.0
 margin_bottom = 601.0
 
 [node name="StartText" type="RichTextLabel" parent="RestartPanel"]
-margin_left = 371.0
-margin_top = 268.0
-margin_right = 1070.0
-margin_bottom = 459.0
+margin_left = 229.0
+margin_top = 262.0
+margin_right = 928.0
+margin_bottom = 453.0
 custom_fonts/normal_font = SubResource( 1 )
-text = "RESTART ?"
+text = "PRESS TO RESTART "
 
 [node name="RestartButton" type="TextureButton" parent="RestartPanel"]
 margin_left = -4.0
