@@ -72,6 +72,8 @@ func play_note(num):
 	if num == 0:
 		play_do()
 		$NoteBlue.visible = true
+		$NoteBlueAnim.visible = true
+		$NoteBlueAnim.play()
 	elif num == 1:
 		play_mi()
 		$NoteOrange.visible = true
@@ -90,7 +92,10 @@ func _on_AudioStreamPlayer2D_finished():
 func _on_TextureButton_pressed():
 	play_do()
 	player_subseq.append(0)
+	$Timer.start(0.5)
 	$NoteBlue.visible = true
+	$NoteBlueAnim.visible = true
+	$NoteBlueAnim.play()
 	if !(check()):
 		fail = true
 	#print(player_subseq)
@@ -99,7 +104,10 @@ func _on_TextureButton_pressed():
 func _on_TextureButton2_pressed():
 	play_mi()
 	player_subseq.append(1)
+	$Timer.start(0.5)
 	$NoteOrange.visible = true
+	$NoteOrangeAnim.visible = true
+	$NoteOrangeAnim.play()
 	if !(check()):
 		fail = true
 	#print(player_subseq)
@@ -107,7 +115,10 @@ func _on_TextureButton2_pressed():
 func _on_TextureButton3_pressed():
 	play_sol()
 	player_subseq.append(2)
+	$Timer.start(0.5)
 	$NotePurple.visible = true
+	$NotePurpleAnim.visible = true
+	$NotePurpleAnim.play()
 	if !(check()):
 		fail = true
 	#print(player_subseq)
@@ -119,8 +130,14 @@ func _on_Timer_timeout():
 	able_to_play = true
 	$WaitPanel.visible = false
 	$NoteBlue.visible = false
+	$NoteBlueAnim.visible = false
+	$NoteBlueAnim.stop()
 	$NoteOrange.visible = false
 	$NotePurple.visible = false
+	$NoteOrangeAnim.visible = false
+	$NoteOrangeAnim.stop()
+	$NotePurpleAnim.visible = false
+	$NotePurpleAnim.stop()
 
 
 func _on_StartButton_pressed():
