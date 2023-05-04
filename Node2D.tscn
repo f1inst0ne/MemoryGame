@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/music/do.mp3" type="AudioStream" id=1]
 [ext_resource path="res://main.gd" type="Script" id=2]
@@ -22,6 +22,14 @@ font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 75
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 27
 font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D"]
@@ -113,7 +121,7 @@ text = "ROUND:"
 [node name="Timer" type="Timer" parent="."]
 
 [node name="StartPanel" type="Panel" parent="."]
-modulate = Color( 1, 1, 1, 0.576471 )
+modulate = Color( 1, 1, 1, 0.631373 )
 margin_left = -13.0
 margin_right = 1027.0
 margin_bottom = 607.0
@@ -123,12 +131,28 @@ margin_right = 1048.0
 margin_bottom = 605.0
 
 [node name="StartText" type="RichTextLabel" parent="StartPanel"]
-margin_left = 250.0
-margin_top = 224.0
-margin_right = 837.0
-margin_bottom = 298.0
+margin_left = 246.0
+margin_top = 435.0
+margin_right = 833.0
+margin_bottom = 509.0
 custom_fonts/normal_font = SubResource( 1 )
 text = "PRESS TO START!!!"
+
+[node name="Lable" type="RichTextLabel" parent="StartPanel"]
+margin_left = 395.0
+margin_top = 14.0
+margin_right = 655.0
+margin_bottom = 82.0
+custom_fonts/normal_font = SubResource( 4 )
+text = "Memory game"
+
+[node name="Instruction" type="RichTextLabel" parent="StartPanel"]
+margin_left = 179.0
+margin_top = 131.0
+margin_right = 877.0
+margin_bottom = 291.0
+custom_fonts/normal_font = SubResource( 5 )
+text = "Press the keys in the same order in which they are played. With each round, the sequence will increase by one note. The more points you score, the greater the reward."
 
 [node name="RestartPanel" type="Panel" parent="."]
 visible = false
